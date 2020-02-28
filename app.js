@@ -1,7 +1,7 @@
 const apikey = 'MF0fI0KP0mloeLa1itOadJIx6K6rJZvS4h0eAMpU';
 const searchUrl = "https://developer.nps.gov/api/v1/parks";
 
-function getYoutubeVideos(searchTerm, maxResults = '10', stateCode = 'CA') {
+function getParkInfo(searchTerm, maxResults = '10', stateCode = 'CA') {
     if (maxResults == '') {
         maxResults = '10'
     }
@@ -61,7 +61,7 @@ function watchForm() {
         const searchTerm = $("#search-term").val();
         const maxResults = $("#max-results").val()
         console.log(searchTerm, maxResults);
-        getYoutubeVideos(searchTerm, maxResults);
+        getParkInfo(searchTerm, maxResults);
     })
 }
 
